@@ -89,7 +89,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{The Three States}
+\begin{frame}[t,allowframebreaks]{The Three States}
   This is the main thing to remember about Git if you want the rest of your
   learning process to go smoothly.  Git has three main states that files reside
   in.
@@ -116,31 +116,66 @@
     \item the working directory, and
     \item the staging area.
   \end{enumerate}
+
+  \pagebreak
+
+  \includegraphics[height=1.0in]{../images/02-getting-started/areas.png}
+
+  Basic Git workflow:
+  \begin{enumerate}
+    \item Modify files in working directory.
+    \item Stage files, adding snapshots of them to staging area.
+    \item Commit.  Takes the files as they are in the staging area and stores
+      that snapshot permanently in your Git directory.
+  \end{enumerate} 
 \end{frame}
 
 \subsection{The Command Line}
-\begin{frame}[t]{}
+\begin{frame}[t]{Different ways to use Git}
+  \begin{itemize}
+    \item Original command line tools.
+    \item Many graphical user interfaces (GUIs) with verying capabilities.
+
+    \item Command line allows you to use {\bf all} Git commands.
+    \item GUIs allow for only a subset of Git commands.
+
+    \item After install, on Windows, Mac OSx, or Linux, command line will be
+      available.
+    \item GUIs, take your pick. \url{http://git-scm.com/downloads/guis} has 12
+      differnt GUIs with different features, OS requirments, \ldots, surely
+      dozens of others exist too.
+  \end{itemize}
 \end{frame}
 
 \subsection{Intalling Git}
-\begin{frame}[t]{}
+\begin{frame}[t]{Git is Free!}
+  \begin{itemize}
+    \item Linux: install via {\tt yum install git} or {\tt apt-get install git}.
+    \item Mac: Xcode Command Lines Tools.
+    \item Windows: \url{http://git-scm.com/download/win}
+    \item Install form source too, if you want.
+  \end{itemize}
 \end{frame}
 
-\begin{frame}[t]{}
+\begin{frame}[t]{Set up}
+  Need to run this once after install.  Done via command line, can be done in
+  {\it some} GUIs.
+
+  {\tt
+    \$ git config --global user.name "Peter DeWitt"
+
+    \$ git config --global user.email "peter.dewitt@ucdenver.edu" 
+  } 
 \end{frame}
 
-\begin{frame}[t]{}
-\end{frame}
+\begin{frame}[t]{Getting Help}
+  You can get information on Git verbs via:
 
-\begin{frame}[t]{}
-\end{frame}
+  {\tt
+    \$ git help $<$verb$>$
 
-\begin{frame}[t]{}
-\end{frame}
+    \$ git $<$verb$>$ --help
 
-\begin{frame}[t]{}
+    \$ man git-$<$verb$>$ 
+  } 
 \end{frame}
-
-\begin{frame}[t]{}
-\end{frame}
-
