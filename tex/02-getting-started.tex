@@ -81,11 +81,41 @@
 
 \begin{frame}[t]{Git Generally Only Adds Data}
   \begin{itemize}
-    \item 
+    \item Nearly all actions in Git add data to the Git database.
+    \item It is difficult to do anything that is not undoable.
+    \item You can lose/corupt un-committed changes.
+    \item It is very difficult to lose anything after a commit, especially with
+      frequent pushes to other repositories.
   \end{itemize}
 \end{frame}
 
 \begin{frame}[t]{The Three States}
+  This is the main thing to remember about Git if you want the rest of your
+  learning process to go smoothly.  Git has three main states that files reside
+  in.
+
+  \begin{enumerate}
+    \item Committed
+      \begin{itemize}
+        \item data is safely stored in the local database.
+      \end{itemize}
+    \item Modified
+      \begin{itemize}
+        \item changed the file(s) but have not committed to the database yet.
+      \end{itemize}
+    \item Staged
+      \begin{itemize}
+        \item Marked modified file(s) in its current version to go into the next
+          commit snapshot.
+      \end{itemize}
+  \end{enumerate}
+
+  This leads to three main sections of a Git project:
+  \begin{enumerate}
+    \item the Git directory,
+    \item the working directory, and
+    \item the staging area.
+  \end{enumerate}
 \end{frame}
 
 \subsection{The Command Line}
