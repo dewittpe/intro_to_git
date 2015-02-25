@@ -1,4 +1,9 @@
 \section{Getting Started}
+\begin{frame}[t]
+  \frametitle{Outline}
+  \framesubtitle{Why? and little bit of How?}
+  \tableofcontents[currentsection,hideallsubsections] 
+\end{frame}
 
 \begin{frame}[t]{A summary of Chapter 1 from {\it Pro Git}}
   \begin{itemize}
@@ -100,9 +105,9 @@
 \end{frame}
 
 \begin{frame}[t,allowframebreaks]{The Three States}
-  This is the main thing to remember about Git if you want the rest of your
-  learning process to go smoothly.  Git has three main states that files reside
-  in.
+  %This is the main thing to remember about Git if you want the rest of your
+  %learning process to go smoothly.  
+  Git has three main states that files reside in.
 
   \begin{enumerate}
     \item Committed
@@ -129,7 +134,9 @@
 
   \pagebreak
 
-  \includegraphics[height=1.0in]{../images/02-getting-started/areas.png}
+  \begin{center}
+    \includegraphics[height=1.55in]{../images/02-getting-started/areas.png}
+  \end{center}
 
   Basic Git workflow:
   \begin{enumerate}
@@ -154,13 +161,18 @@
     \item GUIs, take your pick. \url{http://git-scm.com/downloads/guis} has 12
       differnt GUIs with different features, OS requirments, \ldots, surely
       dozens of others exist too.
+    \item RStudio has a built in Git GUI.
   \end{itemize}
 \end{frame}
 
 \subsection{Intalling Git}
 \begin{frame}[t]{Git is Free!}
   \begin{itemize}
-    \item Linux: install via {\tt yum install git} or {\tt apt-get install git}.
+    \item Linux: install via 
+      \begin{itemize}
+        \item {\tt yum install git}, or
+        \item {\tt apt-get install git}.
+      \end{itemize}
     \item Mac: Xcode Command Lines Tools.
     \item Windows: \url{http://git-scm.com/download/win}
     \item Install form source too, if you want.
@@ -179,7 +191,7 @@
 \end{frame}
 
 \begin{frame}[t]{Getting Help}
-  You can get information on Git verbs via:
+  You can get information on Git verbs in the terminal via:
 
   {\tt
     \$ git help $<$verb$>$

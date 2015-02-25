@@ -1,19 +1,24 @@
   \section{Welcome: Why Git?}
   \begin{frame}[t]{Acknowledgements and Other Resources}
+
     \begin{itemize}
+      \item Primary website: \url{http://git-scm.com}
       \item The first part of this presentation was inspired by, and copies
         from, `Git and
         Github\footnote{\url{github.com/rstudio/webinars/blob/master/2015-02/git-github.pdf}},' a webinar presented by Hadley Wickham.
       \item {\bf FREE} book: {\it Pro Git} 2nd
         edition\footnote{\url{http://git-scm.com/book/en/v2}}, best possible
         single source reference.
-      \item This presentation highlights parts of the first three chapters from
+      \item This presentation highlights the first three chapters from
         {\it Pro Git}.
       \item A branching model I subscribe to:
         \url{http://nvie.com/posts/a-successful-git-branching-model/}
 
-      \item[]
-      \item Learn Git in 15 minutes: \url{https://try.github.io/levels/1/challenges/1}
+      \item Learn Git in 15 minutes: 
+        \url{https://try.github.io/levels/1/challenges/1}
+      \item A Simple guide and cheat sheet: 
+        \url{http://rogerdudler.github.io/git-guide/}
+      \item Git Videos: \url{http://git-scm.com/videos}
 
     \end{itemize} 
   \end{frame}
@@ -37,19 +42,29 @@
     One fails forward towards success.'' -- C.S.\ Lewis
   \end{frame}
 
-  \begin{frame}[t]{A Story in Pictures}
-    \framesubtitle{http://www.phdcomics.com/comics/archive.php?comicid=1323} 
+  \begin{frame}[t]{A Story in Pictures} 
     \begin{center}
-      \includegraphics[height=2.75in]{../images/phd052810s.png} 
-    \end{center}
+      \includegraphics[height=2.350in]{../images/phd052810s.png} 
+    \end{center} 
+    \blfootnote{\url{http://www.phdcomics.com/comics/archive.php?comicid=1323}}
+  \end{frame}
+    
+
+  \begin{frame}[t]{A Story in Pictures} 
+    \begin{center}
+      \includegraphics[height=2.350in]{../images/phd101212s.png} 
+    \end{center} 
+    \blfootnote{\url{http://www.phdcomics.com/comics/archive.php?comicid=1531}}
   \end{frame}
 
-  \begin{frame}[t]{A Story in Pictures}
-    \framesubtitle{http://www.phdcomics.com/comics/archive.php?comicid=1531} 
+
+  \begin{frame}[t]{A Story in Pictures} 
     \begin{center}
-      \includegraphics[height=2.75in]{../images/phd101212s.png} 
-    \end{center}
+      \includegraphics[height=2.000in]{../images/xkcd_git_commit.png} 
+    \end{center} 
+    \blfootnote{\url{http://xkcd.com/1296/}} 
   \end{frame}
+
 
   \begin{frame}[t]
     \frametitle{Changes}
@@ -81,10 +96,10 @@
     \end{center} 
 
     \begin{itemize} 
-      \item sha is a 40 digit long hexadecimal value $> 1.46 \times 10^{48}$
-        unique values
+      \item sha is a 40 digit long hexadecimal value.
+        % $> 1.46 \times 10^{48}$ unique values
       \item sha is a key into a database that provides the author, date, and a
-        description
+        description of the changes.
     \end{itemize} 
   \end{frame}
 
