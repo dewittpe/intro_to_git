@@ -78,7 +78,8 @@ mkdir compiled
 report/report.pdf
 report/report.log
 git status 
-echo "*.log\n*.swp" > .gitignore
+echo "*.log" > .gitignore
+echo "*.swp" >> .gitignore
 git status
 
 --------------------------------------------------------------------------
@@ -128,7 +129,28 @@ git tag
 # Working with Branches
 --------------------------------------------------------------------------
 
-git branch
+git branch develop
+git checkout develop
 
+create a new file
+edit another file
+
+add new file
+commit
+
+add editted filee
+commit
+
+checkout master; show change in the working directory
+
+git merge --no-ff develop
+
+show the git log
+
+#### TALK ABOUT PROS
+* development
+* fetures
+* Simulations on remote servers
+* Down on rabbit hole
 
 
