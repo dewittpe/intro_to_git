@@ -1,0 +1,126 @@
+% Copyright 2007 by Marco Barisione
+% Copyright 2011 by Henricus Bouwmeester
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% If you want to specifically use the Helvetica Neue font which is the 
+% font defined in the Branding and Identity Standards for UC Denver,
+% you will need to use xelatex to compile as well as commenting out 
+% the current font commands in the preamble then uncomment the fontspec
+% package as well as the fontspec command after \begin{document}
+
+\documentclass[10pt]{beamer}
+\usefonttheme{serif}
+% \documentclass[10pt,hyperref={pdfpagelabels=false}]{beamer}
+\usepackage{amsmath,amsfonts,mathrsfs}
+\usepackage{colortbl}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\newcommand{\etal}{{\it et al.\ }}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+
+\makeatletter
+\renewcommand{\@makefnmark}{\hbox{\textsuperscript{\tiny{\@thefnmark}}}}
+\makeatother
+
+% set font to Helvetica
+%\usepackage[T1]{fontenc}
+%\usepackage[scaled=0.92]{helvet}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+% \usepackage{fontspec}
+
+\newif\ifuseblack
+% for black theme, this should be
+%     \useblacktrue
+% for the white theme, this should be
+%     \useblackfalse
+\useblacktrue
+
+\usetheme[pageofpages=of,                    % String used between the current page and the
+                                             % total page count.
+          bullet=circle,                     % Use circles instead of squares for bullets.
+          titleline=true,                    % Show a line below the frame title.
+          showdate=true,                     % show the date on the title page
+          alternativetitlepage=true,         % Use the fancy title page.
+          %titlepagelogo=../images/culogo, % Logo for the first page.
+          titlepagelogo=../images/CUAnschutz_c_clr, % Logo for the first page.
+          % Logo for the header on first page.
+          \ifuseblack
+             headerlogo=../images/pubHealth_tt2_rgb_rv_tp,
+          \else
+             headerlogo=../images/csph_biostatistics,    % Logo for white background.
+          \fi
+          watermark=../images/watermark,               % Watermark used in every page.
+          watermarkheight=50pt,              % Height of the watermark.
+          watermarkheightmult=6,             % The watermark image is 6 times bigger
+                                             % than watermarkheight.
+          ]{UCDenver}
+
+\ifuseblack
+   \usecolortheme{ucdblack}
+\else
+   \usecolortheme{ucdwhite}
+\fi
+
+% ============================================================================ %
+% Document info
+% ============================================================================ %
+
+\author{Peter E. DeWitt}
+\title[Intro to Git]{Git: Distributed Version Control \\ {\small An
+Introduction}}
+\institute{\includegraphics[height=1.2\fontcharht\font`\B]{../images/culogo} AMC $|$ CSPH $|$ Biostats}
+\date{25 February 2015}
+
+\logo{\includegraphics[height=15pt]{../images/csph_biostatistics}}
+
+% ============================================================================ %
+% Document
+% ============================================================================ %
+
+\begin{document} 
+  \watermarkoff
+
+  \begin{frame}[t,plain]
+    \titlepage
+  \end{frame}
+
+  \begin{frame}[t]
+    \frametitle{Outline}
+    \framesubtitle{Why? and little bit of How?}
+    \tableofcontents[hideallsubsections] 
+  \end{frame}
+
+  \include{01-welcome} 
+  \include{02-getting-started}
+  \include{03-git-basics}
+  \include{04-git-branching}
+
+
+  \section{Closing}
+  \begin{frame}[t]{Outline}
+    \tableofcontents[currentsection,hideallsubsections]
+  \end{frame}
+
+  \begin{frame}[t] 
+    \frametitle{Closing}
+    \begin{center}
+    Thank you for your time.
+
+    \vspace{1in}
+
+    The floor is open for questions and comments.
+    \end{center} 
+  \end{frame}
+
+\end{document}
+
