@@ -1,2 +1,3 @@
 *.swp
 slides/intro_to_git.*
+slides/*.aux
